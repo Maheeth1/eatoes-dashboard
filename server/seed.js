@@ -30,22 +30,24 @@ const seedDB = async () => {
     // Create Fake Orders (for Analytics)
     const orders = [
       {
+        orderNumber: "ORD-001", // <--- ADD THIS MANUALLY
         customerName: "John Doe",
         tableNumber: 5,
         totalAmount: 34,
         status: "Delivered",
         items: [
-          { menuItem: createdMenu[0]._id, name: createdMenu[0].name, quantity: 2, price: 12 }, // 2 Wings
-          { menuItem: createdMenu[4]._id, name: createdMenu[4].name, quantity: 2, price: 5 }  // 2 Teas
+          { menuItem: createdMenu[0]._id, name: createdMenu[0].name, quantity: 2, price: 12 }, 
+          { menuItem: createdMenu[4]._id, name: createdMenu[4].name, quantity: 2, price: 5 }
         ]
       },
       {
+        orderNumber: "ORD-002", // <--- ADD THIS MANUALLY (Must be different)
         customerName: "Jane Smith",
         tableNumber: 2,
         totalAmount: 15,
         status: "Pending",
         items: [
-          { menuItem: createdMenu[1]._id, name: createdMenu[1].name, quantity: 1, price: 15 } // 1 Burger
+          { menuItem: createdMenu[1]._id, name: createdMenu[1].name, quantity: 1, price: 15 }
         ]
       }
     ];
